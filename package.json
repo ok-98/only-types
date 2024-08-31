@@ -1,6 +1,6 @@
 {
   "name": "only-types",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "sideEffects": false,
   "license": "MIT",
@@ -40,7 +40,7 @@
     "lint:fix": "eslint --fix .",
     "cs": "pnpm changeset",
     "cs:version": "pnpm cs version",
-    "release": "pnpm build && pnpm gen:docs && pnpm cs publish",
+    "release": "pnpm build && pnpm cs publish",
     "gen:docs": "node ./tooling/gen-docs.cjs",
     "prepare": "husky"
   },
