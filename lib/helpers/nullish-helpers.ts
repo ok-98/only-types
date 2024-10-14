@@ -31,6 +31,7 @@ export type Optional<T> = T | Nullish;
  */
 export type OptionalKeys<T> = {
   [K in keyof T]-?: {} extends Pick<T, K> ? K : never;
+  // eslint-disable-next-line
 } extends { [_ in keyof T]: infer U }
   ? U
   : never;
@@ -44,6 +45,7 @@ export type OptionalKeys<T> = {
  */
 export type RequiredKeys<T> = {
   [K in keyof T]-?: {} extends Pick<T, K> ? never : K;
+  // eslint-disable-next-line
 } extends { [_ in keyof T]: infer U }
   ? U
   : never;
