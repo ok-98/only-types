@@ -417,9 +417,20 @@ export type CtorParam10<C extends new (...args: any) => any> = C extends new (
  * @template F - The function type to be promisified.
  * @returns A new function type that returns a Promise.
  */
-export type Promisify<F extends (...args: any[]) => any> = (
+export type Promisify<F extends (...args: any) => any> = (
   ...args: Parameters<F>
 ) => Promise<ReturnType<F>>;
+
+/**
+ * A utility type that transforms a function type that returns a Promise into a function type that returns the resolved value of that Promise.
+ *
+ * @template F - A function type that returns a Promise.
+ * @param args - The parameters of the function `F`.
+ * @returns The resolved value type of the Promise returned by the function `F`.
+ */
+export type Unpromisify<F extends (...args: any) => Promise<any>> = (
+  ...args: Parameters<F>
+) => ReturnType<F>;
 
 /**
  * Represents a function that can be either asynchronous or synchronous.

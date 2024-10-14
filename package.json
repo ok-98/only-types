@@ -1,6 +1,6 @@
 {
   "name": "only-types",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "sideEffects": false,
   "license": "MIT",
@@ -30,9 +30,6 @@
     "node": ">=18"
   },
   "types": "./dist/only-types.d.ts",
-  "exports": {
-    "types": "./dist/only-types.d.ts"
-  },
   "scripts": {
     "build": "tsc --p ./tsconfig.build.json && vite build",
     "up:i": "pnpm update --interactive",
@@ -42,7 +39,8 @@
     "cs:version": "pnpm cs version",
     "release": "pnpm build && pnpm cs publish",
     "gen:docs": "node ./tooling/gen-docs.cjs",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release:jsr": "npx jsr publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.7",

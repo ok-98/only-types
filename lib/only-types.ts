@@ -61,11 +61,12 @@ export type {
   ParamArgs,
   Promisify,
   SimpleFunction,
+  Unpromisify,
 } from './helpers/function-helpers.ts';
 export type {
   Nullish,
   OptionalKeys,
-  Optional as OptionalT,
+  Optional,
   RequiredKeys,
   TOrNull,
   TOrUndefined,

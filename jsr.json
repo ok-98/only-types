@@ -1,0 +1,5 @@
+{
+    "name": "@only/types",
+    "version": "0.0.2",
+    "exports": "./lib/only-types.ts"
+}
