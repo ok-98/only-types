@@ -10,9 +10,8 @@ export default defineConfig({
     dts({
       include: ['lib'],
       exclude: ['**/*.test.ts'],
-      rollupTypes: true,
       rollupConfig: {
-        bundledPackages: [ "http-code-util"]
+        bundledPackages: ['http-code-util'],
       },
     }),
   ],
@@ -20,7 +19,7 @@ export default defineConfig({
     lib: {
       name,
       entry: [resolve(__dirname, 'lib/only-types.ts')],
-      formats: ["es"]
+      formats: ['es'],
     },
   },
 });
