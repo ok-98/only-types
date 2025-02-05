@@ -1,6 +1,6 @@
 {
   "name": "only-types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "sideEffects": false,
   "license": "MIT",
@@ -24,7 +24,7 @@
     "access": "public"
   },
   "files": [
-    "./dist/only-types.d.ts"
+    "./dist/**/*.d.ts"
   ],
   "engines": {
     "node": ">=20"
